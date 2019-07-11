@@ -6,7 +6,30 @@ import static org.junit.Assert.*;
 
 public class AppTest {
     @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        // App classUnderTest = new App();
+        // assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+
+        Mobile mobile = new Mobile("mobile","white","apple");
+        IPhone iPhone = new IPhone("iphone","white","apple");
+        Andriod andriod= new Andriod("Andriod","white","apple");
+
+        //Story 1
+        mobile.call("hello world");
+        iPhone.call("hello iPhone!!!");
+        andriod.call("hello Andriod!!!");
+
+        //Story 2
+        System.out.println(mobile);
+
+        //Story 3
+        Person person = new Person();
+        person.sentMessage(iPhone,"hello IPHONE",10);
+        person.sentMessage(andriod,"hello Andriod",20);
+
+        person.iphoneRobot(iPhone,"i am iphone robot",20);
+
+        //Story 4
+        person.changePhone(mobile,"Nokia");
+        person.sentMessage(mobile,"My phone has been changed!",20);
     }
 }
